@@ -1,18 +1,28 @@
 import React from 'react';
-import { SafeAreaView, Text, View } from 'react-native';
-import { useTranslation } from 'react-i18next';
+import ThemeProvider from './themes/ThemeProvider';
+import CalendarView from './screens/Calendar/CalendarView';
 
-const title = 'Habit Tracker';
+
+// Monthly List View - Shows list of months with number of completed days / total days
+// Monthly Calendar View - Shows months with chips enabled or disabled based on habit completion
+// Daily View - Shows list of habits with an option to check completed habits
+
+/*
+ *  Features
+ *
+ *  - Sign In Screen
+ *  - Ability to switch between themes (Dark / Light)
+ *  - Ability to switch languages
+ *  - Ability to share habits with friends
+ *  - Monthly List and Calendar View, Daily View, Settings View
+ *  - Animation for Completion Checkmark
+ */
 
 const App = () => {
-  const { t } = useTranslation();
-
   return (
-    <SafeAreaView>
-      <View>
-        <Text>{t('global:appTitle')}</Text>
-      </View>
-    </SafeAreaView>
+    <ThemeProvider>
+      <CalendarView />
+    </ThemeProvider>
   );
 };
 
