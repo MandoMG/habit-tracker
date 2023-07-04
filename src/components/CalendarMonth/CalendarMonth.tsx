@@ -15,7 +15,7 @@ const CalendarMonth = ({ color, monthTitle, numDays }: CalendarMonthProps) => {
   const chipColor = colors?.dailyChip[color];
 
   return (
-    <View>
+    <View style={{ marginHorizontal: 8}}>
       <Text style={{ color: colors?.outline, marginHorizontal: 8, fontSize: 24, fontWeight: '700' }}>{monthTitle}</Text>
       <FlatList
         scrollEnabled={false}

@@ -11,12 +11,17 @@ const CalendarView = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        {Object.entries(months).map((monthEntry) => {
+        {Object.entries(months).map((monthEntry, index) => {
           const monthKey = monthEntry[0] as MonthKeys;
           const monthValue = monthEntry[1];
 
           return (
-            <CalendarMonth monthTitle={monthValue} numDays={getMonthDays(monthKey)} color={getMonthColor(monthKey)} />
+            <CalendarMonth
+              key={`${monthKey}-${index}`}
+              monthTitle={monthValue}
+              numDays={getMonthDays(monthKey)}
+              color={getMonthColor(monthKey)}
+            />
           );
         })}
       </ScrollView>
