@@ -1,21 +1,24 @@
-import { SafeAreaView, ScrollView, Text } from 'react-native';
+import React from 'react';
+import { SafeAreaView, ScrollView } from 'react-native';
 import CalendarMonth from '../../components/CalendarMonth/CalendarMonth';
-import { BaseColor } from '../../types';
-import React, {useContext} from 'react';
 import { useTranslation } from 'react-i18next';
-import {ThemeContext} from "../../themes/ThemeProvider";
+import { getMonthColor, getMonthDays, MonthKeys } from './util/CalendarMapper';
 
 const CalendarView = () => {
   const { t } = useTranslation();
-  const { colors } = useContext(ThemeContext) || {};
+  const months = t('global:months', { returnObjects: true });
 
   return (
     <SafeAreaView>
       <ScrollView>
-        <Text style={{ color: colors?.outline}}>{t('global:appTitle')}</Text>
-        <CalendarMonth monthTitle="January" numDays={31} color={BaseColor.red} />
-        <CalendarMonth monthTitle="February" numDays={28} color={BaseColor.orange} />
-        <CalendarMonth monthTitle="March" numDays={31} color={BaseColor.blue} />
+        {Object.entries(months).map((monthEntry) => {
+          const monthKey = monthEntry[0] as MonthKeys;
+          const monthValue = monthEntry[1];
+
+          return (
+            <CalendarMonth monthTitle={monthValue} numDays={getMonthDays(monthKey)} color={getMonthColor(monthKey)} />
+          );
+        })}
       </ScrollView>
     </SafeAreaView>
   );

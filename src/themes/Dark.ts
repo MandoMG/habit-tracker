@@ -33,24 +33,24 @@ const Dark: AppColors = {
       fillSelected: '#fa55e7',
     },
     [BaseColor.brown]: {
-      borderSelected: '',
-      fillSelected: '',
+      borderSelected: '#643c28',
+      fillSelected: '#78503c',
     },
     [BaseColor.gray]: {
-      borderSelected: '',
-      fillSelected: '',
+      borderSelected: '#6e6e6e',
+      fillSelected: '#aaaaaa',
     },
     [BaseColor.lightBlue]: {
-      borderSelected: '',
-      fillSelected: '',
+      borderSelected: '#64a0b9',
+      fillSelected: '#8cc3dc',
     },
     [BaseColor.magenta]: {
-      borderSelected: '',
-      fillSelected: '',
+      borderSelected: '#872e5b',
+      fillSelected: '#de5298',
     },
     [BaseColor.lime]: {
-      borderSelected: '',
-      fillSelected: '',
+      borderSelected: '#649146',
+      fillSelected: '#a5fa55',
     },
   },
 };
