@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { FlatList, Text, View } from 'react-native';
-import DailyChip from '../Chip/DailyChip';
-import { BaseColor } from '../../types';
-import { ThemeContext } from '../../themes/ThemeProvider';
+import DailyChip from '../../../../components/Chip/DailyChip';
+import { BaseColor } from '../../../../types';
+import { ThemeContext } from '../../../../themes/ThemeProvider';
 
 interface CalendarMonthProps {
   monthTitle: string;

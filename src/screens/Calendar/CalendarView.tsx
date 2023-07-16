@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
-import CalendarMonth from '../../components/CalendarMonth/CalendarMonth';
+import CalendarMonth from './components/CalendarMonth/CalendarMonth';
 import { useTranslation } from 'react-i18next';
 import { getMonthColor, getMonthDays, MonthKeys } from './util/CalendarMapper';
 
